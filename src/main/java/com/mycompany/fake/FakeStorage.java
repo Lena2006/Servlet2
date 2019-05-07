@@ -15,12 +15,15 @@ import java.util.List;
  * @author user
  */
 public class FakeStorage {
+
     private static final FakeStorage storage;
-    static  {
+
+    static {
         storage = new FakeStorage();
     }
-        private List<User> users;
-        private FakeStorage() {
+    private List<User> users;
+
+    private FakeStorage() {
         this.users = new ArrayList<>();
         User user = new User("Kirill", "222", LocalDate.parse("1975-02-02"));
         User user1 = new User("Trofim", "222", LocalDate.parse("1985-02-02"));
@@ -28,13 +31,14 @@ public class FakeStorage {
         users.add(user);
         users.add(user1);
         users.add(user2);
-}
-public static FakeStorage storage(){
-return storage;
-}
-public List<User> users(){
-return users;
     }
-    
-    
+
+    public static FakeStorage storage() {
+        return storage;
+    }
+
+    public List<User> users() {
+        return users;
+    }
+
 }

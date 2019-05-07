@@ -8,7 +8,7 @@ package com.mycompany.filters;
 import java.io.IOException;
 
 import javax.servlet.*;
-
+import javax.servlet.annotation.WebFilter;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
@@ -17,6 +17,7 @@ import javax.servlet.http.HttpSession;
  *
  * @author user
  */
+@WebFilter("/home")
 public class AuthFilter implements Filter {
 
     @Override
